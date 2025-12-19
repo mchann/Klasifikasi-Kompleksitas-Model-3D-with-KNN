@@ -84,6 +84,41 @@ Project ini dibangun menggunakan stack teknologi berikut:
 Pastikan Anda telah menginstal **Python 3.8+** dan **Blender 3.x / 4.x**.
 
 ### 1. Clone Repository
-```bash
+
 git clone [https://github.com/username-anda/polypix-ai.git](https://github.com/username-anda/polypix-ai.git)
 cd polypix-ai
+2. Install Dependencies
+
+Bash
+
+pip install streamlit matplotlib trimesh
+3. Setup Dataset (Opsional)
+Jika ingin melatih ulang model:
+
+Bash
+
+python desain/mining_objaverse.py  # Download data
+python desain/data_splitter.py     # Bagi data train/test
+🚀 Cara Penggunaan
+Langkah 1: Jalankan Aplikasi
+Buka terminal dan ketik perintah berikut:
+
+Bash
+
+streamlit run desain/app.py
+Langkah 2: Konfigurasi Path Blender (Wajib!)
+Pada sidebar di sebelah kiri aplikasi, masukkan lokasi file .exe Blender di komputer Anda.
+
+
+Contoh: C:\Program Files\Blender Foundation\Blender 3.6\blender.exe
+
+Langkah 3: Upload & Analisis
+Upload file .blend atau .obj, lalu klik tombol 🚀 RUN ANALYSIS.
+
+<div align="center">
+
+
+<img src="img/screenshot2.png" alt="Hasil Analisis PolyPix" width="90%" style="border-radius: 10px; box-shadow: 0px 4px 20px rgba(0,0,0,0.5);">
+
+
+<p><em>Hasil Output: Klasifikasi Geometri & Rekomendasi Harga</em></p> </div>
