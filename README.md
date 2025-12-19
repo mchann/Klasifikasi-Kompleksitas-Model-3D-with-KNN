@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="desain/logo.png" alt="PolyPix AI Logo" width="150" height="150">
+  <!-- <img src="desain/logo.png" alt="PolyPix AI Logo" width="150" height="150"> -->
   
   <h1>🧊 PolyPix AI</h1>
   
