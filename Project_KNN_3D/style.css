@@ -1,0 +1,246 @@
+/* style.css - FINAL BIG VERSION */
+
+/* --- GLOBAL --- */
+.stApp {
+  background-color: #0e1117;
+}
+h1 {
+  text-align: center;
+  color: white;
+  font-weight: 800;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.subtitle {
+  text-align: center;
+  color: #888;
+  margin-bottom: 50px;
+  font-size: 1.2rem;
+}
+
+/* --- UPLOADER --- */
+[data-testid="stFileUploader"] {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+[data-testid="stFileUploader"] section {
+  background-color: #000;
+
+  /* HANYA MEMUAT BACKGROUND TEXTURE, LOGO DIHAPUS */
+  background-image: url("__BG__");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.2);
+  min-height: 400px;
+}
+[data-testid="stFileUploader"] section > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Memastikan tombol di TENGAH (Horizontal) */
+  justify-content: flex-end; /* Mendorong tombol ke BAWAH (Vertikal) */
+  height: 100%;
+
+  /* PENTING: Ubah angka ini untuk mencocokkan tombol ke kotak abu-abu */
+  padding-bottom: 30px; /* Coba turunkan jadi 20px atau 30px */
+
+  padding-top: 0px; /* Nol-kan saja agar tidak mendorong ke bawah berlebih */
+}
+[data-testid="stFileUploader"] button {
+  display: none;
+}
+[data-testid="stFileUploader"] label {
+  display: none;
+}
+[data-testid="stFileUploader"] section span {
+ display: none;
+}
+
+/* --- DASHBOARD HASIL (MIRIP REFERENSI) --- */
+.result-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr; /* Kolom tengah lebih lebar untuk Gauge */
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background-color: #111418; /* Lebih gelap sesuai referensi */
+  border: 1px solid #30363d;
+  border-radius: 18px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 15px;
+}
+
+/* KARTU 1: STATS */
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  color: #8b949e;
+  font-size: 16px;
+}
+.stat-val {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* KARTU 2: GAUGE BESAR */
+.gauge-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.gauge-circle {
+  width: 180px; /* JAUH LEBIH BESAR */
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  border: 12px solid #222; /* Ring dasar tebal */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  text-align: center;
+  flex-direction: column;
+}
+.gauge-text {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+.desc-text {
+  text-align: center;
+  font-size: 14px;
+  color: #8b949e;
+  line-height: 1.4;
+}
+
+/* LOGIKA WARNA GLOWING (Sesuai Referensi) */
+.status-high {
+  border-color: #ff2e2e;
+  color: #ff2e2e;
+  box-shadow: 0 0 30px rgba(255, 46, 46, 0.4),
+    inset 0 0 20px rgba(255, 46, 46, 0.2);
+  text-shadow: 0 0 10px rgba(255, 46, 46, 0.8);
+}
+.status-med {
+  border-color: #ffa500;
+  color: #ffa500;
+  box-shadow: 0 0 30px rgba(255, 165, 0, 0.4),
+    inset 0 0 20px rgba(255, 165, 0, 0.2);
+}
+.status-low {
+  border-color: #00ff88;
+  color: #00ff88;
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.4),
+    inset 0 0 20px rgba(0, 255, 136, 0.2);
+}
+
+/* KARTU 3: REKOMENDASI */
+.rec-item {
+  margin-bottom: 30px;
+}
+.rec-price {
+  font-size: 42px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+}
+.rec-render-text {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+}
+.rec-label {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.rec-icon-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* --- NAVBAR STYLE --- */
+
+/* 1. Container Tab jadi Navbar */
+[data-baseweb="tab-list"] {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end; /* Menu geser ke KANAN */
+  align-items: center;
+  padding: 15px 10px;
+  margin-bottom: 40px; /* Jarak antara navbar dan konten bawah */
+  gap: 20px;
+}
+
+/* 2. Logo Otomatis (polypix.<>) di Kiri */
+[data-baseweb="tab-list"]::before {
+  content: "polypix.<>";
+  font-size: 22px;
+  font-weight: 800;
+  color: white;
+  margin-right: auto; /* INI KUNCINYA: Mendorong tab menu jauh ke kanan */
+  letter-spacing: 1px;
+  font-family: sans-serif;
+}
+
+/* 3. Style Teks Menu */
+[data-baseweb="tab"] {
+  background-color: transparent !important;
+  border: none !important;
+  color: #666; /* Warna teks saat tidak aktif */
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0 10px;
+}
+
+/* 4. Menu yang Aktif (Sedang Dipilih) */
+[aria-selected="true"] {
+  background-color: transparent !important;
+  color: #ffffff !important; /* Putih terang */
+  font-weight: 700;
+}
+
+/* 5. Hilangkan garis merah bawaan Streamlit */
+[data-baseweb="tab-highlight"] {
+  display: none !important;
+}
+
+.block-container {
+  padding-top: 0px !important; /* Hapus padding atas */
+  margin-top: 30px !important; /* Beri sedikit jarak aman dari tepi layar browser */
+  padding-bottom: 5rem;
+}
+
+header[data-testid="stHeader"] {
+  display: none;
+}

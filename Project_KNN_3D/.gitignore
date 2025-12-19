@@ -1,0 +1,14 @@
+# --- SAMPAH CACHE (WAJIB BLOKIR) ---
+.objaverse/
+__pycache__/
+
+# --- FILE SEMENTARA (JANGAN DIUPLOAD) ---
+result.json
+preview.glb
+*.blend1
+*.log
+
+# --- LINGKUNGAN VIRTUAL (JIKA ADA) ---
+venv/
+env/
+.env
