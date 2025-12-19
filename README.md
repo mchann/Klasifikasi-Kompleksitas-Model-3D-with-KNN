@@ -87,11 +87,13 @@ Pastikan Anda telah menginstal **Python 3.8+** dan **Blender 3.x / 4.x**.
 
 git clone [https://github.com/username-anda/polypix-ai.git](https://github.com/username-anda/polypix-ai.git)
 cd polypix-ai
+<br>
 2. Install Dependencies
 
 Bash
 
 pip install streamlit matplotlib trimesh
+<br>
 3. Setup Dataset (Opsional)
 Jika ingin melatih ulang model:
 
@@ -99,6 +101,7 @@ Bash
 
 python desain/mining_objaverse.py  # Download data
 python desain/data_splitter.py     # Bagi data train/test
+<br>
 🚀 Cara Penggunaan
 Langkah 1: Jalankan Aplikasi
 Buka terminal dan ketik perintah berikut:
@@ -106,12 +109,13 @@ Buka terminal dan ketik perintah berikut:
 Bash
 
 streamlit run desain/app.py
+<br>
 Langkah 2: Konfigurasi Path Blender (Wajib!)
 Pada sidebar di sebelah kiri aplikasi, masukkan lokasi file .exe Blender di komputer Anda.
 
 
 Contoh: C:\Program Files\Blender Foundation\Blender 3.6\blender.exe
-
+<br>
 Langkah 3: Upload & Analisis
 Upload file .blend atau .obj, lalu klik tombol 🚀 RUN ANALYSIS.
 
