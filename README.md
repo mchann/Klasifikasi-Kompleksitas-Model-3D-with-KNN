@@ -26,7 +26,7 @@
 <hr>
 
 <div align="center">
-  <img src="img/screenshot1.png" alt="Dashboard Tampilan Utama" width="90%" style="border-radius: 10px; box-shadow: 0px 4px 20px rgba(0,0,0,0.5);">
+  <img src="img/screenshot2.png" alt="Dashboard Tampilan Utama" width="90%" style="border-radius: 10px; box-shadow: 0px 4px 20px rgba(0,0,0,0.5);">
   <br>
   <p><em>Tampilan Dashboard Utama: Upload & Analisis 3D Real-Time</em></p>
 </div>
@@ -122,7 +122,7 @@ Upload file .blend atau .obj, lalu klik tombol 🚀 RUN ANALYSIS.
 <div align="center">
 
 
-<img src="img/screenshot2.png" alt="Hasil Analisis PolyPix" width="90%" style="border-radius: 10px; box-shadow: 0px 4px 20px rgba(0,0,0,0.5);">
+<img src="img/screenshot1.png" alt="Hasil Analisis PolyPix" width="90%" style="border-radius: 10px; box-shadow: 0px 4px 20px rgba(0,0,0,0.5);">
 
 
 <p><em>Hasil Output: Klasifikasi Geometri & Rekomendasi Harga</em></p> </div>
